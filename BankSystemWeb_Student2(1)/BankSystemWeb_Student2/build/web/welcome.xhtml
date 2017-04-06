@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <head>
+        <title>Login OK</title>
+    </head>
+    <body>
+        <h:form>
+        Welcome, #{login.theLoginAccount.ID}
+        <p>
+            View your account:<br></br>
+            <h:selectOneMenu id="accounts" style="width:150px" value="#{login.theLoginAccount.selectedAccountToView}">
+                             <f:selectItems value="#{login.theLoginAccount.managedAccountsID}"/>
+            </h:selectOneMenu>
+            &nbsp; &nbsp;
+            <h:commandButton id="view" value="Go" action="statement.xhtml"/>
+        </p>
+        </h:form>
+    </body>
+</html>
